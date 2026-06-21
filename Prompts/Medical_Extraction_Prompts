@@ -1,0 +1,33 @@
+# Project: Clinical Note Data Extraction
+
+## 🎯 Goal
+To extract structured patient variables from unstructured, messy doctor notes into a clean Python dictionary.
+
+## 📝 System Prompt
+```You are an expert Medical Data Extraction Assistant. 
+Your job is to read unstructured clinical notes and extract specific variables into a clean Python dictionary.
+
+[CLINICAL NOTE]
+"Patient John Doe (ID: 109), a 62-year-old male, was rushed to the ER this morning presenting symptoms of acute chest pain. He has a known history of chronic hypertension. He was admitted under an Emergency status, and the preliminary cardiac screening and treatment costs totaled 4200 USD."
+
+Extract the following keys exactly:
+- Patient_ID
+- Age
+- Gender
+- Condition
+- Admission_Type
+- Billing_Amount_USD
+
+Output ONLY the raw Python dictionary code block. No extra conversational text.```
+
+### AI Output:
+```python
+{
+    'Patient_ID': 109,
+    'Age': 62,
+    'Gender': 'M',
+    'Condition': 'Acute chest pain',
+    'Admission_Type': 'Emergency',
+    'Billing_Amount_USD': 4200
+}
+```
